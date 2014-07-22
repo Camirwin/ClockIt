@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnClock"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="@string/clock_in"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edittext_bg"
+        android:orientation="vertical">
+
+        <Chronometer
+            android:id="@+id/chronTimeWorked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="#fa1414"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tvEarnedIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fa1414"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnClients"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:onClick="toManageClients"
+        android:text="@string/manage_clients"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnServices"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:onClick="toManageServices"
+        android:text="@string/manage_services"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnTimeStamps"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toManageTimeStamps"
+        android:text="@string/manage_time_stamps"
+        android:textSize="26sp" />
+
+</LinearLayout>

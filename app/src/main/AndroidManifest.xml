@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.clockit.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.clockit.app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ManageClientsActivity"
+            android:label="@string/title_activity_manage_clients" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ManageServicesActivity"
+            android:label="@string/title_activity_manage_services" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.CreateClientActivity"
+            android:label="@string/title_activity_create_client" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.ManageClientsActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.CreateServiceActivity"
+            android:label="@string/title_activity_create_service" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.ManageServicesActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ViewClientActivity"
+            android:label="@string/title_activity_view_client" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.ManageClientsActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ViewServiceActivity"
+            android:label="@string/title_activity_view_service" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.ManageServicesActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ChooseClientActivity"
+            android:label="@string/title_activity_choose_client" >
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ChooseServiceActivity"
+            android:label="@string/title_activity_choose_service" >
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ClockOutActivity"
+            android:label="@string/title_activity_clock_out" >
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ManageTimeStampsActivity"
+            android:label="@string/title_activity_manage_time_stamps" >
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ManageClientContactsActivity"
+            android:label="@string/title_activity_manage_client_contacts" >
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.AddContactActivity"
+            android:label="@string/title_activity_add_contact" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.ManageClientContactsActivity" />
+        </activity>
+        <activity
+            android:name="com.example.clockit.app.ViewTimeStampActivity"
+            android:label="@string/title_activity_view_time_stamp" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.clockit.app.ManageTimeStampsActivity" />
+        </activity>
+    </application>
+
+</manifest>

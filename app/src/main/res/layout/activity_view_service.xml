@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ViewServiceActivity">
+
+    <TextView
+        android:id="@id/tvServiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textIsSelectable="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@id/etServiceName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg2"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="text|textCapWords"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@id/etServiceDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_bg2"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@id/tvServiceRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/rate"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textIsSelectable="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@id/etServiceRate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittext_bg2"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditService"
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="editService"
+            android:text="@string/edit"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@id/btnCancel"
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cancelClick"
+            android:text="@string/returns"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@id/btnView"
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toAssociationActivity"
+            android:text="@string/view"
+            android:textSize="26sp" />
+
+        <Spinner
+            android:id="@id/ddlItems"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:entries="@array/service_items_array"
+            android:prompt="@string/ddl_prompt"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        style="@style/btnStyleShakespeare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#c94039"
+        android:onClick="displayConfirmationPopup"
+        android:text="@string/remove"
+        android:textSize="26sp" />
+
+</LinearLayout>

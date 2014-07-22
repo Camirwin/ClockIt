@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CreateServiceActivity">
+
+    <TextView
+        android:id="@+id/tvServiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textIsSelectable="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etServiceName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:inputType="text|textCapWords"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etServiceDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_bg"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvServiceRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/rate"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etServiceRate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:inputType="numberDecimal"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="createService"
+            android:text="@string/create"
+            android:textSize="26sp" />
+
+        <Button
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toParent"
+            android:text="@string/cancel"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+</LinearLayout>

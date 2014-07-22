@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ViewTimeStampActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="@string/earned_income"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textIsSelectable="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etTimeStampEarnedIncome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg2"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="text"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etTimeStampDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_bg2"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditTimeStamp"
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="editTimeStamp"
+            android:text="@string/edit"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@id/btnCancel"
+            style="@style/btnStyleShakespeare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cancelClick"
+            android:text="@string/returns"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <Button
+        style="@style/btnStyleShakespeare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#c94039"
+        android:onClick="displayConfirmationPopup"
+        android:text="@string/remove"
+        android:textSize="26sp" />
+
+</LinearLayout>
